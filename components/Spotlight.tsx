@@ -15,7 +15,7 @@ export function Spotlight() {
               className="pointer-events-none absolute inset-0 opacity-60"
               style={{
                 background:
-                  "radial-gradient(60% 80% at 80% 20%, rgba(194,96,60,0.45), transparent 70%)",
+                  "radial-gradient(60% 80% at 80% 20%, rgba(0,113,227,0.35), transparent 70%)",
               }}
             />
             <div className="relative grid items-center gap-10 lg:grid-cols-2">

@@ -7,31 +7,31 @@
   clean vertical reading.
 */
 @theme {
-  /* Warm light surfaces */
-  --color-bg: #f5f0e8;
-  --color-surface: #fbf8f2;
+  /* Apple-style surfaces: white + light gray */
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f7;
   --color-elevated: #ffffff;
 
-  /* Warm near-black ink */
-  --color-fg: #1f1c17;
-  --color-muted: #6c655b;
-  --color-faint: #9a9287;
+  /* Near-black ink + neutral grays */
+  --color-fg: #1d1d1f;
+  --color-muted: #6e6e73;
+  --color-faint: #86868b;
 
-  --color-line: rgba(31, 28, 23, 0.09);
-  --color-line-strong: rgba(31, 28, 23, 0.16);
+  --color-line: rgba(0, 0, 0, 0.1);
+  --color-line-strong: rgba(0, 0, 0, 0.16);
 
-  /* Single warm accent — terracotta/clay, reads as "human, calm". */
-  --color-accent: #c2603c;
-  --color-accent-ink: #8f4226;
-  --color-accent-soft: rgba(194, 96, 60, 0.12);
+  /* Single accent — Apple blue, used sparingly for actions/links. */
+  --color-accent: #0071e3;
+  --color-accent-ink: #0066cc;
+  --color-accent-soft: rgba(0, 113, 227, 0.1);
 
-  /* Soft pastel section tints (Holo-style category blocks) */
-  --color-tint-sage: #e7ece1;
-  --color-tint-peach: #f6e6dc;
-  --color-tint-sky: #e2eaee;
-  --color-tint-sand: #efe7d8;
-  --color-tint-lilac: #e9e4ee;
-  --color-tint-rose: #f3e2e2;
+  /* Section tiles — neutral grays (kept as named tokens for compatibility). */
+  --color-tint-sage: #f5f5f7;
+  --color-tint-peach: #f5f5f7;
+  --color-tint-sky: #f5f5f7;
+  --color-tint-sand: #f5f5f7;
+  --color-tint-lilac: #f5f5f7;
+  --color-tint-rose: #f5f5f7;
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;

@@ -30,6 +30,7 @@ export function SaveGrid() {
       eyebrow="What you can save"
       title="If you can share it, Drain can keep it."
       intro="Sixteen kinds of things — and counting. Each one lands as structured markdown, tagged and ready for your AI."
+      className="bg-surface"
     >
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {items.map((item, i) => (

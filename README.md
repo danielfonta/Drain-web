@@ -4,9 +4,11 @@ Minimalist marketing site for **Drain**: a second brain your AI can actually
 read, owned by you as markdown in your own GitHub.
 
 Built with **Next.js (App Router) + Tailwind CSS v4**. Light by default —
-warm cream surfaces, soft rounded cards and gentle pastel section tints with a
-single warm accent. Design direction: structure and look adapted from
-[tryholo.com](https://tryholo.com), applied to Drain's product and copy.
+an Apple-style palette of white and neutral grays (`#f5f5f7`), near-black ink
+(`#1d1d1f`) and a single Apple-blue accent used sparingly, with alternating
+white/gray section bands. Section **structure** is adapted from
+[tryholo.com](https://tryholo.com); titles use the **Tiempos Headline** serif,
+matching the app.
 
 ## Develop
 

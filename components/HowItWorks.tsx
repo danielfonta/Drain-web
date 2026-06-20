@@ -27,6 +27,7 @@ export function HowItWorks() {
       eyebrow="How it works"
       title="Share → Refine → Use"
       intro="Three steps from a passing thought to context your AI can act on."
+      className="bg-surface"
     >
       <ol className="grid gap-4 sm:grid-cols-3">
         {steps.map((step, i) => (

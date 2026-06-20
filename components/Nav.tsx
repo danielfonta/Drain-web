@@ -23,7 +23,7 @@ export function Nav() {
           ))}
         </nav>
 
-        <CtaButton variant="solid" className="shrink-0">
+        <CtaButton variant="accent" className="shrink-0">
           {site.cta}
         </CtaButton>
       </div>

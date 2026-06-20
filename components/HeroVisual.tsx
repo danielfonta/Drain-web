@@ -13,11 +13,11 @@ export function HeroVisual() {
         className="pointer-events-none absolute -inset-x-10 -top-10 bottom-0 -z-10 opacity-70 blur-3xl"
         style={{
           background:
-            "radial-gradient(40% 50% at 30% 20%, rgba(194,96,60,0.16), transparent 70%), radial-gradient(40% 50% at 75% 60%, rgba(194,96,60,0.10), transparent 70%)",
+            "radial-gradient(40% 50% at 30% 20%, rgba(0,113,227,0.10), transparent 70%), radial-gradient(40% 50% at 75% 60%, rgba(0,113,227,0.07), transparent 70%)",
         }}
       />
 
-      <div className="grid items-center gap-4 rounded-3xl border border-line bg-elevated/70 p-4 shadow-[0_24px_60px_-30px_rgba(31,28,23,0.35)] backdrop-blur-sm sm:grid-cols-[minmax(0,0.9fr)_auto_minmax(0,1.25fr)] sm:gap-2">
+      <div className="grid items-center gap-4 rounded-3xl border border-line bg-surface p-4 shadow-[0_24px_60px_-30px_rgba(0,0,0,0.25)] backdrop-blur-sm sm:grid-cols-[minmax(0,0.9fr)_auto_minmax(0,1.25fr)] sm:gap-2">
         {/* Phone: share sheet */}
         <PhoneShareSheet />
 

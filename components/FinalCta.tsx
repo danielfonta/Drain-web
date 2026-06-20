@@ -12,7 +12,7 @@ export function FinalCta() {
               className="pointer-events-none absolute inset-0 -z-10 opacity-80"
               style={{
                 background:
-                  "radial-gradient(50% 60% at 50% 20%, rgba(194,96,60,0.12), transparent 70%)",
+                  "radial-gradient(50% 60% at 50% 20%, rgba(0,113,227,0.1), transparent 70%)",
               }}
             />
             <h2 className="mx-auto max-w-2xl text-balance text-3xl font-semibold tracking-tight text-fg sm:text-5xl">

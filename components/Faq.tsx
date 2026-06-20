@@ -27,6 +27,7 @@ export function Faq() {
       align="center"
       eyebrow="FAQ"
       title="Questions, answered."
+      className="bg-surface"
     >
       <div className="mx-auto max-w-3xl divide-y divide-line overflow-hidden rounded-3xl border border-line bg-elevated">
         {faqs.map((faq, i) => (
