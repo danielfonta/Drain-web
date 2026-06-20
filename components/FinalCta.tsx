@@ -1,55 +1,48 @@
 import { Reveal } from "./Reveal";
 import { site } from "@/lib/site";
 
+// Holo's newsletter band: heading on the left, email capture on the right.
 export function FinalCta() {
   return (
-    <section id="early-access" className="px-6 py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl">
+    <section
+      id="early-access"
+      className="border-t border-line px-6 py-14 sm:py-20"
+    >
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-line bg-elevated px-6 py-16 text-center sm:py-24">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 -z-10 opacity-80"
-              style={{
-                background:
-                  "radial-gradient(50% 60% at 50% 20%, rgba(0,113,227,0.1), transparent 70%)",
-              }}
-            />
-            <h2 className="mx-auto max-w-2xl text-balance text-3xl font-semibold tracking-tight text-fg sm:text-5xl">
-              Your brain, finally usable.
-            </h2>
-            <p className="mx-auto mt-4 max-w-md text-pretty text-muted">
-              Join the waitlist for early access. Your knowledge, owned by you
-              and readable by your AI.
-            </p>
+          <h2 className="text-balance font-display text-3xl tracking-tight text-fg sm:text-4xl">
+            Stay in the loop.
+          </h2>
+          <p className="mt-2 text-pretty text-muted">
+            Join the waitlist — don&apos;t miss early access or any of our
+            updates.
+          </p>
+        </Reveal>
 
-            <form
-              className="mx-auto mt-8 flex max-w-md flex-col items-center gap-3 sm:flex-row"
-              action="#"
-              method="post"
+        <Reveal delay={80} className="w-full lg:max-w-md">
+          <form
+            className="flex flex-col gap-3 sm:flex-row"
+            action="#"
+            method="post"
+          >
+            <label htmlFor="email" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              className="w-full rounded-full border border-line-strong bg-surface px-5 py-3 text-sm text-fg placeholder:text-faint focus:border-accent focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="inline-flex w-full shrink-0 items-center justify-center rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg sm:w-auto"
             >
-              <label htmlFor="email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder="you@example.com"
-                className="w-full rounded-full border border-line-strong bg-bg px-5 py-3 text-sm text-fg placeholder:text-faint focus:border-accent focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-accent-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-elevated sm:w-auto"
-              >
-                {site.cta}
-              </button>
-            </form>
-            <p className="mt-4 text-xs text-faint">
-              Early access is rolling out gradually. No spam, just an invite.
-            </p>
-          </div>
+              {site.cta}
+            </button>
+          </form>
         </Reveal>
       </div>
     </section>

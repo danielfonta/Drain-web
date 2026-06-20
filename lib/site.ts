@@ -16,8 +16,8 @@ export const site = {
 // Top navigation — wider, Holo-style.
 export const navLinks = [
   { label: "How it works", href: "#how-it-works" },
-  { label: "What you can save", href: "#capture" },
-  { label: "Why Drain", href: "#understanding" },
+  { label: "What you can save", href: "#categories" },
+  { label: "Why Drain", href: "#privacy" },
   { label: "FAQ", href: "#faq" },
   { label: "Blog", href: "#blog" },
 ] as const;

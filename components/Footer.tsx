@@ -1,22 +1,23 @@
 import { Logo } from "./Logo";
 import { site } from "@/lib/site";
 
-// Holo-style multi-column footer.
+// Holo's five-column dark footer.
 const columns = [
   {
     heading: "Product",
     links: [
       { label: "How it works", href: "#how-it-works" },
       { label: "What you can save", href: "#capture" },
-      { label: "Why Drain", href: "#understanding" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Pricing", href: "#" },
+      { label: "FAQs", href: "#faq" },
     ],
   },
   {
-    heading: "Use it for",
+    heading: "Why",
     links: [
       { label: "Research", href: "#categories" },
       { label: "Reading list", href: "#categories" },
+      { label: "Ideas & notes", href: "#categories" },
       { label: "Work & projects", href: "#categories" },
       { label: "Personal", href: "#categories" },
     ],
@@ -25,8 +26,9 @@ const columns = [
     heading: "Resources",
     links: [
       { label: "Blog", href: "#blog" },
-      { label: "GitHub", href: site.github },
-      { label: "Privacy", href: "#privacy" },
+      { label: "For teams", href: "#" },
+      { label: "Terms & Conditions", href: "#" },
+      { label: "Privacy Policy", href: "#privacy" },
     ],
   },
   {
@@ -45,14 +47,14 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-line px-6 pt-16 pb-10">
+    <footer className="border-t border-line px-6 pt-14 pb-10">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-[16rem] text-sm leading-relaxed text-muted">
-              A second brain your AI can actually read — owned by you as
-              markdown in your own GitHub.
+              A second brain your AI can actually read — owned by you as markdown
+              in your own GitHub.
             </p>
           </div>
 
@@ -77,12 +79,9 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 sm:flex-row">
-          <p className="text-xs text-faint">
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
-          </p>
-          <p className="text-xs text-faint">Made for people who own their data.</p>
-        </div>
+        <p className="mt-12 text-xs text-faint">
+          © {new Date().getFullYear()} {site.name}. All rights reserved.
+        </p>
       </div>
     </footer>
   );

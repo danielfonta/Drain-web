@@ -7,31 +7,43 @@
   clean vertical reading.
 */
 @theme {
-  /* Apple-style surfaces: white + light gray */
-  --color-bg: #ffffff;
-  --color-surface: #f5f5f7;
-  --color-elevated: #ffffff;
+  /* Holo-style dark surfaces */
+  --color-bg: #0a0a0b;
+  --color-surface: #161618;
+  --color-elevated: #1e1e21;
 
-  /* Near-black ink + neutral grays */
-  --color-fg: #1d1d1f;
-  --color-muted: #6e6e73;
-  --color-faint: #86868b;
+  /* Off-white ink + grays */
+  --color-fg: #f4f4f2;
+  --color-muted: #a1a1a6;
+  --color-faint: #6e6e73;
 
-  --color-line: rgba(0, 0, 0, 0.1);
-  --color-line-strong: rgba(0, 0, 0, 0.16);
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-strong: rgba(255, 255, 255, 0.18);
 
-  /* Single accent — Apple blue, used sparingly for actions/links. */
-  --color-accent: #0071e3;
-  --color-accent-ink: #0066cc;
-  --color-accent-soft: rgba(0, 113, 227, 0.1);
+  /* Warm accent — Holo's orange/red. */
+  --color-accent: #fb5a2d;
+  --color-accent-ink: #e0461c;
+  --color-accent-soft: rgba(251, 90, 45, 0.14);
 
-  /* Section tiles — neutral grays (kept as named tokens for compatibility). */
-  --color-tint-sage: #f5f5f7;
-  --color-tint-peach: #f5f5f7;
-  --color-tint-sky: #f5f5f7;
-  --color-tint-sand: #f5f5f7;
-  --color-tint-lilac: #f5f5f7;
-  --color-tint-rose: #f5f5f7;
+  /* Navy panel (labs + privacy) and the bottom promo bar. */
+  --color-navy: #0d2235;
+  --color-promo: #1d6cff;
+
+  /* Category / icon colors (the multicolor icon row). */
+  --color-cat-green: #57b894;
+  --color-cat-lime: #c7d44e;
+  --color-cat-orange: #fb5a2d;
+  --color-cat-blue: #4f9df0;
+  --color-cat-purple: #9b7bff;
+  --color-cat-red: #f0594f;
+
+  /* Legacy tile tokens — kept as dark surfaces for compatibility. */
+  --color-tint-sage: #161618;
+  --color-tint-peach: #161618;
+  --color-tint-sky: #161618;
+  --color-tint-sand: #161618;
+  --color-tint-lilac: #161618;
+  --color-tint-rose: #161618;
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;

@@ -5,7 +5,7 @@ import { site, navLinks } from "@/lib/site";
 // Nav: logo + section links + a single CTA (Holo-style wide nav).
 export function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-md supports-[backdrop-filter]:bg-bg/65">
+    <header className="sticky top-0 z-50 border-b border-line bg-bg/70 backdrop-blur-xl supports-[backdrop-filter]:bg-bg/55">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6">
         <a href="#top" className="-m-2 shrink-0 p-2" aria-label={site.name}>
           <Logo />
@@ -23,7 +23,7 @@ export function Nav() {
           ))}
         </nav>
 
-        <CtaButton variant="accent" className="shrink-0">
+        <CtaButton variant="solid" className="shrink-0">
           {site.cta}
         </CtaButton>
       </div>

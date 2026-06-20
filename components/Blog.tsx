@@ -1,60 +1,62 @@
-import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { SectionHeader } from "./SectionHeader";
 
-// Holo closes with a Blog/guides teaser. Drain's guides speak to the AI-native
-// reader: ownership, context, and getting more out of your agents.
 const posts = [
   {
-    tag: "Guide",
-    title: "Why your second brain should be markdown you own",
-    minutes: "5 min read",
-    tint: "bg-tint-sand",
+    title: "What should you actually save?",
+    excerpt: "A simple rule for what's worth keeping in a second brain.",
+    bg: "linear-gradient(160deg, #2a2622 0%, #14110f 100%)",
   },
   {
-    tag: "Workflow",
-    title: "Wiring Claude Code into your personal knowledge base",
-    minutes: "7 min read",
-    tint: "bg-tint-sky",
+    title: "Why your knowledge workflow is stalling",
+    excerpt: "Capture is easy. Recall is the hard part — here's the fix.",
+    bg: "linear-gradient(160deg, #22271f 0%, #0f110d 100%)",
   },
   {
-    tag: "Privacy",
-    title: "Encrypted vaults: keeping secrets in an AI-readable brain",
-    minutes: "4 min read",
-    tint: "bg-tint-rose",
+    title: "How to read your brain back: the practical guide",
+    excerpt: "Wiring Claude Code into your own markdown knowledge base.",
+    bg: "linear-gradient(160deg, #1f242a 0%, #0d0f11 100%)",
   },
 ];
 
 export function Blog() {
   return (
-    <Section
-      id="blog"
-      align="center"
-      eyebrow="From the blog"
-      title="Get more out of a brain you own."
-    >
-      <div className="grid gap-4 lg:grid-cols-3">
-        {posts.map((post, i) => (
-          <Reveal key={post.title} delay={i * 80}>
-            <a
-              href="#"
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-elevated transition-colors hover:border-fg/20"
-            >
-              <div className={`aspect-[16/9] ${post.tint}`} />
-              <div className="flex flex-1 flex-col p-6">
-                <span className="text-xs font-medium uppercase tracking-[0.14em] text-accent">
-                  {post.tag}
-                </span>
-                <h3 className="mt-3 text-pretty text-lg font-semibold leading-snug text-fg">
-                  {post.title}
-                </h3>
-                <span className="mt-auto pt-6 text-xs text-faint">
-                  {post.minutes}
-                </span>
-              </div>
-            </a>
-          </Reveal>
-        ))}
+    <section id="blog" className="px-6 py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeader
+          title="Understand your tools and habits better."
+          subtitle="Clear guidance to help you get the most out of a brain you own."
+          action={{ label: "Explore our guides", href: "#" }}
+        />
+
+        <div className="grid gap-4 lg:grid-cols-3">
+          {posts.map((post, i) => (
+            <Reveal key={post.title} delay={i * 80}>
+              <a
+                href="#"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-colors hover:border-line-strong"
+              >
+                <div
+                  className="relative aspect-[16/10]"
+                  style={{ background: post.bg }}
+                >
+                  <h3 className="absolute inset-x-0 bottom-0 p-5 font-display text-xl leading-snug text-fg">
+                    {post.title}
+                  </h3>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="text-sm leading-relaxed text-muted">
+                    {post.excerpt}
+                  </p>
+                  <span className="mt-auto pt-5 text-sm font-medium text-accent">
+                    Read more →
+                  </span>
+                </div>
+              </a>
+            </Reveal>
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }
