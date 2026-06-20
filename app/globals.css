@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/*
+  Design direction: Linear as the anchor, Vercel in the restraint.
+  Dark by default, near-monochrome + a single accent. Strong hierarchy,
+  lots of whitespace, one clean vertical column.
+*/
+@theme {
+  --color-bg: #08080a;
+  --color-surface: #0e0e11;
+  --color-elevated: #141418;
+  --color-fg: #ededef;
+  --color-muted: #9a9aa3;
+  --color-faint: #6b6b73;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.14);
+
+  /* Single accent — a restrained violet, reads as "intelligence". */
+  --color-accent: #8b7bff;
+  --color-accent-soft: rgba(139, 123, 255, 0.14);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-fg);
+}
+
+/* Subtle, fast reveal-on-scroll. No parallax, no heavy motion. */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
