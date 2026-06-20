@@ -10,14 +10,14 @@ export function HeroVisual() {
       {/* ambient accent glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -inset-x-10 -top-10 bottom-0 -z-10 opacity-60 blur-3xl"
+        className="pointer-events-none absolute -inset-x-10 -top-10 bottom-0 -z-10 opacity-70 blur-3xl"
         style={{
           background:
-            "radial-gradient(40% 50% at 30% 20%, rgba(139,123,255,0.18), transparent 70%), radial-gradient(40% 50% at 75% 60%, rgba(139,123,255,0.10), transparent 70%)",
+            "radial-gradient(40% 50% at 30% 20%, rgba(194,96,60,0.16), transparent 70%), radial-gradient(40% 50% at 75% 60%, rgba(194,96,60,0.10), transparent 70%)",
         }}
       />
 
-      <div className="grid items-center gap-4 rounded-2xl border border-line bg-surface/60 p-4 backdrop-blur-sm sm:grid-cols-[minmax(0,0.9fr)_auto_minmax(0,1.25fr)] sm:gap-2">
+      <div className="grid items-center gap-4 rounded-3xl border border-line bg-elevated/70 p-4 shadow-[0_24px_60px_-30px_rgba(31,28,23,0.35)] backdrop-blur-sm sm:grid-cols-[minmax(0,0.9fr)_auto_minmax(0,1.25fr)] sm:gap-2">
         {/* Phone: share sheet */}
         <PhoneShareSheet />
 
@@ -36,15 +36,15 @@ export function HeroVisual() {
 function PhoneShareSheet() {
   return (
     <div className="mx-auto w-full max-w-[280px]">
-      <div className="overflow-hidden rounded-[26px] border border-line-strong bg-bg p-2 shadow-2xl">
-        <div className="rounded-[20px] bg-elevated/80 p-3">
+      <div className="overflow-hidden rounded-[26px] border border-line-strong bg-surface p-2 shadow-xl">
+        <div className="rounded-[20px] bg-bg/80 p-3">
           <div className="mb-3 flex items-center justify-between px-1">
             <span className="text-[11px] text-faint">Safari</span>
             <span className="text-[11px] text-faint">9:41</span>
           </div>
 
           {/* shared item preview */}
-          <div className="mb-2 rounded-xl border border-line bg-surface px-3 py-2.5">
+          <div className="mb-2 rounded-xl border border-line bg-elevated px-3 py-2.5">
             <p className="truncate text-[12px] font-medium text-fg">
               Designing for AI agents
             </p>
@@ -55,7 +55,7 @@ function PhoneShareSheet() {
 
           {/* the Drain action, highlighted */}
           <div className="flex items-center gap-2.5 rounded-xl border border-accent/40 bg-accent-soft px-3 py-2.5">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/20 text-accent">
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent/15 text-accent">
               <svg width="15" height="15" viewBox="0 0 20 20" fill="none">
                 <path
                   d="M5 7 L10 4 L15 7 M5 7 L5 13 L10 16 L15 13 L15 7"
@@ -89,12 +89,12 @@ function PhoneShareSheet() {
 function AgentWindow() {
   return (
     <div className="w-full">
-      <div className="overflow-hidden rounded-xl border border-line-strong bg-bg shadow-2xl">
+      <div className="overflow-hidden rounded-xl border border-line-strong bg-surface shadow-xl">
         {/* title bar */}
-        <div className="flex items-center gap-2 border-b border-line bg-elevated/60 px-3.5 py-2.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+        <div className="flex items-center gap-2 border-b border-line bg-bg/60 px-3.5 py-2.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-fg/15" />
+          <span className="h-2.5 w-2.5 rounded-full bg-fg/15" />
+          <span className="h-2.5 w-2.5 rounded-full bg-fg/15" />
           <span className="ml-2 font-mono text-[11px] text-faint">
             ~/brain/reading/designing-for-ai-agents.md
           </span>
@@ -112,8 +112,7 @@ function AgentWindow() {
             </p>
             <p className="mt-2 text-fg/80">## Why I saved this</p>
             <p className="text-muted">
-              Reference for the onboarding flow — the part on tool
-              permissions.
+              Reference for the onboarding flow — the part on tool permissions.
             </p>
             <p className="mt-2 text-fg/80">## Key points</p>
             <p className="text-muted">- Agents need scoped, legible access</p>
@@ -121,7 +120,7 @@ function AgentWindow() {
           </div>
 
           {/* agent terminal */}
-          <div className="bg-surface/40 p-3.5 font-mono text-[11px] leading-relaxed">
+          <div className="bg-bg/40 p-3.5 font-mono text-[11px] leading-relaxed">
             <p className="text-accent">
               <span className="text-faint">$</span> claude
             </p>

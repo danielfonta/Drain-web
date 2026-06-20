@@ -1,23 +1,37 @@
 @import "tailwindcss";
 
 /*
-  Design direction: Linear as the anchor, Vercel in the restraint.
-  Dark by default, near-monochrome + a single accent. Strong hierarchy,
-  lots of whitespace, one clean vertical column.
+  Design direction: Holo-inspired. Warm, light, calm.
+  Cream background, soft white cards with generous rounding, a single warm
+  accent, and gentle pastel tints per section. Strong hierarchy, lots of air,
+  clean vertical reading.
 */
 @theme {
-  --color-bg: #08080a;
-  --color-surface: #0e0e11;
-  --color-elevated: #141418;
-  --color-fg: #ededef;
-  --color-muted: #9a9aa3;
-  --color-faint: #6b6b73;
-  --color-line: rgba(255, 255, 255, 0.08);
-  --color-line-strong: rgba(255, 255, 255, 0.14);
+  /* Warm light surfaces */
+  --color-bg: #f5f0e8;
+  --color-surface: #fbf8f2;
+  --color-elevated: #ffffff;
 
-  /* Single accent — a restrained violet, reads as "intelligence". */
-  --color-accent: #8b7bff;
-  --color-accent-soft: rgba(139, 123, 255, 0.14);
+  /* Warm near-black ink */
+  --color-fg: #1f1c17;
+  --color-muted: #6c655b;
+  --color-faint: #9a9287;
+
+  --color-line: rgba(31, 28, 23, 0.09);
+  --color-line-strong: rgba(31, 28, 23, 0.16);
+
+  /* Single warm accent — terracotta/clay, reads as "human, calm". */
+  --color-accent: #c2603c;
+  --color-accent-ink: #8f4226;
+  --color-accent-soft: rgba(194, 96, 60, 0.12);
+
+  /* Soft pastel section tints (Holo-style category blocks) */
+  --color-tint-sage: #e7ece1;
+  --color-tint-peach: #f6e6dc;
+  --color-tint-sky: #e2eaee;
+  --color-tint-sand: #efe7d8;
+  --color-tint-lilac: #e9e4ee;
+  --color-tint-rose: #f3e2e2;
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
@@ -41,7 +55,7 @@ body {
 
 ::selection {
   background-color: var(--color-accent-soft);
-  color: var(--color-fg);
+  color: var(--color-accent-ink);
 }
 
 /* Subtle, fast reveal-on-scroll. No parallax, no heavy motion. */

@@ -21,13 +21,23 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <Section id="how-it-works" eyebrow="How it works" title="Share → Refine → Use">
-      <ol className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
+    <Section
+      id="how-it-works"
+      align="center"
+      eyebrow="How it works"
+      title="Share → Refine → Use"
+      intro="Three steps from a passing thought to context your AI can act on."
+    >
+      <ol className="grid gap-4 sm:grid-cols-3">
         {steps.map((step, i) => (
-          <Reveal as="li" key={step.n} delay={i * 80} className="bg-surface">
-            <div className="flex h-full flex-col p-6 sm:p-7">
-              <span className="font-mono text-xs text-faint">{step.n}</span>
-              <h3 className="mt-4 text-lg font-medium text-fg">{step.title}</h3>
+          <Reveal as="li" key={step.n} delay={i * 80}>
+            <div className="flex h-full flex-col rounded-3xl border border-line bg-elevated p-6 sm:p-7">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-soft font-mono text-xs text-accent">
+                {step.n}
+              </span>
+              <h3 className="mt-5 text-lg font-semibold text-fg">
+                {step.title}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {step.body}
               </p>
