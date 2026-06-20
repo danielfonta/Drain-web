@@ -3,11 +3,9 @@
 Minimalist marketing site for **Drain**: a second brain your AI can actually
 read, owned by you as markdown in your own GitHub.
 
-Built with **Next.js (App Router) + Tailwind CSS v4**. A near-1:1 **dark
-replica of [tryholo.com](https://tryholo.com)** — block for block — filled
-with Drain's content. Dark base (`#0a0a0b`), off-white ink, a warm orange
-accent (`#fb5a2d`), a navy feature panel and multicolor category icons.
-Titles use the **Tiempos Headline** serif, matching the app.
+Built with **Next.js (App Router) + Tailwind CSS v4**, dark by default,
+near-monochrome with a single accent. Design direction: Linear as the anchor,
+Vercel in the restraint.
 
 ## Develop
 
@@ -19,37 +17,24 @@ npm run build    # production build (static export-friendly)
 
 ## Structure
 
-Blocks map 1:1 onto Holo's, top to bottom (`app/page.tsx`). Holo block →
-Drain content:
+One idea per section, lots of air (`app/page.tsx`):
 
-| Holo block | Component | Drain content |
+| Section | Component | Purpose |
 | --- | --- | --- |
-| Nav | `components/Nav.tsx` | Logo + section links + light CTA pill. |
-| Hero (2 cards) | `components/Hero.tsx` | Serif headline, chip row, photo card + app card with phone mock. |
-| What matters most | `components/Priorities.tsx` | Six dark category pills with colored icons. |
-| Authority quote | `components/ExpertQuote.tsx` | A power-user quote. |
-| Orange feature card | `components/FeatureBanner.tsx` | "Capture once. Use everywhere." + markdown phone. |
-| User testimonials | `components/Testimonials.tsx` | Three photo-backed quote cards. |
-| Biological age | `components/BioAge.tsx` | Knowledge dashboard (stats + colored bar chart). |
-| FAQ | `components/Faq.tsx` | Accordion (native `<details>`). |
-| Blog | `components/Blog.tsx` | Three guide cards. |
-| Labs map + privacy | `components/Labs.tsx` | Navy panel: dot field + 100% stat + encrypted vaults. |
-| Newsletter | `components/FinalCta.tsx` | Email/waitlist capture band. |
-| Icon row | `components/IconRow.tsx` | Multicolor category icons. |
-| Footer | `components/Footer.tsx` | Five-column footer. |
-| Giant wordmark | `components/BigWordmark.tsx` | Oversized "Drain". |
-| Promo banner | `components/PromoBanner.tsx` | Blue bar at the very bottom. |
-
-Category data (labels, colors, icons) is shared in `components/categories.tsx`;
-repeating section heads use `components/SectionHeader.tsx`.
+| Hero | `components/Hero.tsx` + `HeroVisual.tsx` | Promise + the signature dual visual (iOS capture → markdown → AI reads it). |
+| How it works | `components/HowItWorks.tsx` | Three steps: Share → Refine → Use. |
+| Why it’s different | `components/WhyDifferent.tsx` | Own it · Your AI reads it · Private. |
+| The shift | `components/TheShift.tsx` | The sharp line vs. the "bookmark graveyard". |
+| Ownership & privacy | `components/Ownership.tsx` | Your repo, your keys, encrypted vaults. |
+| Final CTA | `components/FinalCta.tsx` | Closing line + waitlist email capture. |
+| Footer | `components/Footer.tsx` | Minimal. |
 
 ## Customizing
 
 - **Product name & top-level copy** live in `lib/site.ts` — the name (`Drain`)
   is set in one place so it can be swapped if it changes.
-- **Design tokens** (warm surfaces, accent, pastel section tints, fonts) live
-  in the `@theme` block of `app/globals.css`.
-- **Nav & section links** live in `navLinks` in `lib/site.ts`.
+- **Design tokens** (colors, accent, fonts) live in the `@theme` block of
+  `app/globals.css`.
 - **The CTA** assumes a pre-launch **waitlist** (email capture in the final
   CTA). The form currently posts to `#` — wire it to a real endpoint (e.g. a
   waitlist provider or API route) before launch.

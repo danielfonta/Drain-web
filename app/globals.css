@@ -1,54 +1,26 @@
 @import "tailwindcss";
 
 /*
-  Design direction: Holo-inspired. Warm, light, calm.
-  Cream background, soft white cards with generous rounding, a single warm
-  accent, and gentle pastel tints per section. Strong hierarchy, lots of air,
-  clean vertical reading.
+  Design direction: Linear as the anchor, Vercel in the restraint.
+  Dark by default, near-monochrome + a single accent. Strong hierarchy,
+  lots of whitespace, one clean vertical column.
 */
 @theme {
-  /* Holo-style dark surfaces */
-  --color-bg: #0a0a0b;
-  --color-surface: #161618;
-  --color-elevated: #1e1e21;
+  --color-bg: #08080a;
+  --color-surface: #0e0e11;
+  --color-elevated: #141418;
+  --color-fg: #ededef;
+  --color-muted: #9a9aa3;
+  --color-faint: #6b6b73;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.14);
 
-  /* Off-white ink + grays */
-  --color-fg: #f4f4f2;
-  --color-muted: #a1a1a6;
-  --color-faint: #6e6e73;
-
-  --color-line: rgba(255, 255, 255, 0.1);
-  --color-line-strong: rgba(255, 255, 255, 0.18);
-
-  /* Warm accent — Holo's orange/red. */
-  --color-accent: #fb5a2d;
-  --color-accent-ink: #e0461c;
-  --color-accent-soft: rgba(251, 90, 45, 0.14);
-
-  /* Navy panel (labs + privacy) and the bottom promo bar. */
-  --color-navy: #0d2235;
-  --color-promo: #1d6cff;
-
-  /* Category / icon colors (the multicolor icon row). */
-  --color-cat-green: #57b894;
-  --color-cat-lime: #c7d44e;
-  --color-cat-orange: #fb5a2d;
-  --color-cat-blue: #4f9df0;
-  --color-cat-purple: #9b7bff;
-  --color-cat-red: #f0594f;
-
-  /* Legacy tile tokens — kept as dark surfaces for compatibility. */
-  --color-tint-sage: #161618;
-  --color-tint-peach: #161618;
-  --color-tint-sky: #161618;
-  --color-tint-sand: #161618;
-  --color-tint-lilac: #161618;
-  --color-tint-rose: #161618;
+  /* Single accent — a restrained violet, reads as "intelligence". */
+  --color-accent: #8b7bff;
+  --color-accent-soft: rgba(139, 123, 255, 0.14);
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  /* Display serif for titles — Tiempos Headline, matching the app. */
-  --font-display: var(--font-tiempos), Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -69,13 +41,7 @@ body {
 
 ::selection {
   background-color: var(--color-accent-soft);
-  color: var(--color-accent-ink);
-}
-
-/* Titles use the Tiempos display serif (eyebrows/labels stay sans). */
-h1,
-h2 {
-  font-family: var(--font-display);
+  color: var(--color-fg);
 }
 
 /* Subtle, fast reveal-on-scroll. No parallax, no heavy motion. */

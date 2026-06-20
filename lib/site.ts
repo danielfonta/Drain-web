@@ -7,17 +7,5 @@ export const site = {
   description:
     "Share anything from your phone. Drain turns it into clean, organized knowledge — stored as markdown in your own GitHub, ready for Claude and any AI agent to use.",
   cta: "Get early access",
-  ctaSecondary: "See how it works",
   url: "https://drain.app",
-  email: "hello@drain.app",
-  github: "https://github.com",
 } as const;
-
-// Top navigation — wider, Holo-style.
-export const navLinks = [
-  { label: "How it works", href: "#how-it-works" },
-  { label: "What you can save", href: "#categories" },
-  { label: "Why Drain", href: "#privacy" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Blog", href: "#blog" },
-] as const;

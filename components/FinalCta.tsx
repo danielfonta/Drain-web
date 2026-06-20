@@ -1,27 +1,29 @@
 import { Reveal } from "./Reveal";
 import { site } from "@/lib/site";
 
-// Holo's newsletter band: heading on the left, email capture on the right.
 export function FinalCta() {
   return (
     <section
       id="early-access"
-      className="border-t border-line px-6 py-14 sm:py-20"
+      className="relative overflow-hidden border-t border-line px-6 py-28 sm:py-36"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-70"
+        style={{
+          background:
+            "radial-gradient(50% 60% at 50% 30%, rgba(139,123,255,0.16), transparent 70%)",
+        }}
+      />
+      <div className="mx-auto max-w-2xl text-center">
         <Reveal>
-          <h2 className="text-balance font-display text-3xl tracking-tight text-fg sm:text-4xl">
-            Stay in the loop.
+          <h2 className="text-balance text-3xl font-semibold tracking-tight text-fg sm:text-5xl">
+            Your brain, finally usable.
           </h2>
-          <p className="mt-2 text-pretty text-muted">
-            Join the waitlist — don&apos;t miss early access or any of our
-            updates.
-          </p>
         </Reveal>
-
-        <Reveal delay={80} className="w-full lg:max-w-md">
+        <Reveal delay={80}>
           <form
-            className="flex flex-col gap-3 sm:flex-row"
+            className="mx-auto mt-8 flex max-w-md flex-col items-center gap-3 sm:flex-row"
             action="#"
             method="post"
           >
@@ -38,11 +40,16 @@ export function FinalCta() {
             />
             <button
               type="submit"
-              className="inline-flex w-full shrink-0 items-center justify-center rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-colors hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg sm:w-auto"
+              className="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg shadow-[0_1px_0_rgba(255,255,255,0.4)_inset] transition-colors duration-200 hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg sm:w-auto"
             >
               {site.cta}
             </button>
           </form>
+        </Reveal>
+        <Reveal delay={140}>
+          <p className="mt-4 text-xs text-faint">
+            Early access is rolling out gradually. No spam, just an invite.
+          </p>
         </Reveal>
       </div>
     </section>
