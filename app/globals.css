@@ -35,6 +35,8 @@
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* Display serif for titles — Tiempos Headline, matching the app. */
+  --font-display: var(--font-tiempos), Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -56,6 +58,12 @@ body {
 ::selection {
   background-color: var(--color-accent-soft);
   color: var(--color-accent-ink);
+}
+
+/* Titles use the Tiempos display serif (eyebrows/labels stay sans). */
+h1,
+h2 {
+  font-family: var(--font-display);
 }
 
 /* Subtle, fast reveal-on-scroll. No parallax, no heavy motion. */

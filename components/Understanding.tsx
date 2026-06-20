@@ -55,7 +55,7 @@ export function Understanding() {
                 <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">
                   {f.eyebrow}
                 </p>
-                <h3 className="mt-3 text-balance text-2xl font-semibold tracking-tight text-fg sm:text-3xl">
+                <h3 className="mt-3 text-balance font-display text-2xl font-semibold tracking-tight text-fg sm:text-3xl">
                   {f.title}
                 </h3>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-muted">
